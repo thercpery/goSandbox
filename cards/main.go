@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	cards := newDeck()
 
@@ -7,4 +9,9 @@ func main() {
 
 	hand.print()
 	remainingCards.print()
+
+	fmt.Println(cards.toString())
+
+	// greeting := "Hi there!"
+	// fmt.Println([]byte(greeting)) // returns [72 105 32 116 104 101 114 101 33]
 }
