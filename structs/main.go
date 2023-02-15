@@ -34,13 +34,16 @@ func main() {
 		},
 	}
 
-	jimPointer := &jim // "&" gives the RAM address to "jim" variable
-	jimPointer.updateName("Jimbo")
+	// jimPointer := &jim // "&" gives the RAM address to "jim" variable
+	jim.updateName("Jimbo")
 	jim.print()
 
 	/*
 		&variable = gives the memory address of the value the variable is pointing at
 		*pointer = gives the value of the memory address is pointing at
+
+		pointer = memory address
+		value = value
 	*/
 }
 
