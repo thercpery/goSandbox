@@ -1,5 +1,11 @@
 package main
 
+import "fmt"
+
+type bot interface {
+	getGreeting() string
+}
+
 type EnglishBot struct{}
 type SpanishBot struct{}
 
@@ -11,15 +17,9 @@ func main() {
 	printGreeting(sb)
 }
 
-// This will cause an error because the function name "printGreeting" is redeclared
-
-// func printGreeting(eb EnglishBot) {
-// 	fmt.Println(eb.getGreeting())
-// }
-
-// func printGreeting(sb SpanishBot) {
-// 	fmt.Println(sb.getGreeting())
-// }
+func printGreeting(b bot) {
+	fmt.Println(b.getGreeting())
+}
 
 func (EnglishBot) getGreeting() string {
 	// VERY custom logic for generating an English greeting.
