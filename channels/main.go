@@ -7,7 +7,7 @@ import (
 
 func main() {
 	links := []string{
-		"https://google.com",
+		"http://google.com",
 		"https://facebook.com",
 		"https://stackoverflow.com",
 		"https://go.dev",
